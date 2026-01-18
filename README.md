@@ -106,10 +106,6 @@ Application.OnTime GameTimer, "GameTick"
 - **Physics simulation** (gravity, velocity, friction)
 - **Particle system** for wall explosion
 
-#### 4. Templating System
-- **Dragon Template** - Stored at AU6:BC16, copied on game start
-- **Pipe Template** - Stored at E77:I86, replicated per pipe section
-
 ## 🎨 Design Decisions
 
 ### Why Excel?
@@ -124,20 +120,6 @@ Application.OnTime GameTimer, "GameTick"
 - Minimal redraw operations (only changed cells)
 - Timer-based game loop (non-blocking)
 
-### Game Balance Tuning
-```vba
-' Pong Settings
-BALL_SPEED: 3 cells/tick (increases every 150 ticks)
-PADDLE_HEIGHT: 4 cells
-BARRIER_SPAWN: Every 8 ticks
-WALL_HEALTH: 5 hits
-
-' Flappy Bird Settings  
-GRAVITY: 1 (cells/tick²)
-FLAP_STRENGTH: -4 (instant upward velocity)
-PIPE_GAP: 8 cells
-PIPE_SPAWN: Every 50 ticks (7.5 seconds)
-```
 
 ## 🐛 Known Issues & Limitations
 
@@ -197,23 +179,9 @@ PIPE_SPAWN: Every 50 ticks (7.5 seconds)
 
 ## 🙏 Acknowledgments
 
-- **Hack&Roll 2026** - For hosting an amazing hackathon
+- **NUS Hackers** - For hosting an amazing hackathon
 - **Classic Arcade Games** - Inspiration from Pong (1972) and Flappy Bird (2013)
 - **Excel Community** - For VBA documentation and examples
-- **Claude AI** - For pair programming assistance and debugging support
-
-## 📝 License
-
-This project is created for educational and entertainment purposes. Feel free to use, modify, and learn from the code!
-
-**Note**: Original Pong (Atari, 1972) and Flappy Bird (Dong Nguyen, 2013) are properties of their respective creators. This is a tribute/homage project.
-
-## 🎮 Try It Yourself!
-
-1. Download `PongGame.xlsm`
-2. Enable macros when prompted
-3. Click "Start Game" in the Menu sheet
-4. Have fun! 🎉
 
 ---
 
